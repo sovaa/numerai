@@ -1,5 +1,10 @@
 ## Numerai Baseline Project
 
+  * [About](#about)
+  * [Installation](#installation)
+  * [Model Description](#model-description)
+  * [Example Run](#example-run)
+
 ### About
 
 This project is what has evolved from my participation in the numer.ai machine learning competitions. It's nothing more
@@ -82,3 +87,10 @@ The reason why the `l2_x_*` files are saved at all is because the second script,
 for a NN:
 
     (numerai) sovaa@stink ~/numerai $ time python keras_for_l2.py
+
+### Resource
+
+Some resources to learn more:
+
+* https://medium.com/jim-fleming/notes-on-the-numerai-ml-competition-14e3d42c19f3
+* https://mlwave.com/kaggle-ensembling-guide/
