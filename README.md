@@ -1,7 +1,6 @@
-Numerai Baseline Project
-==
+## Numerai Baseline Project
 
-=== About ===
+### About
 
 This project is what has evolved from my participation in the numer.ai machine learning competitions. It's nothing more
 than experimentation and thus it only contains some scripts and not a full-fledged project.
@@ -13,7 +12,7 @@ without publishing your work, but please refer to this repository if you.
 Pull-requests are more than welcome, since I personally am not particularly skilled in the ML field, but wish to learn
 more.
 
-=== Installation ===
+### Installation
 
 Miniconda3 has been my goto for a while so I'll include a setup example for that:
 
@@ -37,7 +36,7 @@ Script assumes files called `data_train.csv` and `data_predict.csv`:
     (numerai) sovaa@stink ~/numerai $ mv numerai_training_data.csv data_train.csv
     (numerai) sovaa@stink ~/numerai $ mv numerai_tournament_data.csv data_predict.csv
 
-=== Model Description ===
+### Model Description
 
 The model is a 2 level stack; first level uses a couple of classifiers, which (as of writing) is:
 
@@ -60,7 +59,7 @@ a 5 component PCA transformation.
 
 Lastly, the L2 blender will then train on the training PCA data and predict on the prediction PCA data. 
 
-=== Example Run ===
+### Example Run
 
 Train and output the `tournament_results.csv` file:
 
@@ -77,7 +76,7 @@ _After_ the `stacking.py` script has run, you'll have the output from level 1 of
 The level 2 blender is e.g. LR/XGBoost; the X input for it is the `blend_x_train.csv` and `blend_x_test.csv`. These two
 matrices are transformations of the `l2_x_*` files like this pseudo code describes:
 
-    blend_x_train = PCA(polynomial_features(l2_x_train) 
+    blend_x_train = PCA(polynomial_features(l2_x_train))
 
 The reason why the `l2_x_*` files are saved at all is because the second script, `keras_for_l2.py`, used them as input
 for a NN:
