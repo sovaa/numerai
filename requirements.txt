@@ -12,7 +12,7 @@ matplotlib==2.0.2
 MulticoreTSNE==0.1
 numpy==1.13.1
 pandas==0.20.3
-protobuf==3.4.0
+protobuf==3.18.3
 psutil==5.2.2
 pycparser==2.18
 pyparsing==2.2.0
